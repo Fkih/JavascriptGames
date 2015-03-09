@@ -63,7 +63,7 @@
 	 var paused = false;// Pause state
 	 var step = 0;
 	 var init = 0;
-         var contact = false;// Boolean sued to test if we eat an other cube 
+         var contact = false;// Boolean sued to test if we eat an other square 
 	 var setouche = false;//it tests if the snake touches itself 
 	 var score =0;//score will count between levels
 	 var level =1; /* apres le fait de bien developper le niveau 1 on pensera a passer au 2 quisera par exemple une accelration de jeu puis 3 qui sera la création de quelques obstacles qui seront des auttres barieres pour mourir */
@@ -278,7 +278,7 @@
 	 var t;
 
 
-	                     /* Génération of a cube to eat  */
+	                     /* Génération of a square to eat  */
 
 	 function paroi() {
 		 if (init>1){eaten.play();}
@@ -328,7 +328,7 @@
 
 			/**************************************************/
 
-			/*Function to test if we eat the generated cube and if it the case we will add it the snake*/
+			/*Function to test if we eat the generated square and if it the case we will add it the snake*/
 
 	 function manger() {
 	     if ((((x == mangex) && ((y == mangey) || (y == mangey))) || ((y == mangey) && ((x == mangex) || (x == mangex)))) && (contact == false)) {
@@ -395,7 +395,7 @@
 	
         
     
-	 paroi(); // we will generate a cube to eat from the first time
+	 paroi(); // we will generate a square to eat from the first time
 	 document.onkeydown = direction; //we will execute the fucntion on a press button
 
 </script>
